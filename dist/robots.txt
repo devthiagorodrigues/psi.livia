@@ -1,0 +1,3 @@
+# Versão de revisão: não indexar
+User-agent: *
+Disallow: /

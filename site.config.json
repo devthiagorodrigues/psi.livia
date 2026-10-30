@@ -1,0 +1,34 @@
+{
+  "_leia": "Dados de contato do site. Depois de editar, rode: npm run producao",
+
+  "dominio": "",
+  "_dominio": "Endereço final com https, sem barra no fim. Ex.: https://www.seudominio.com.br",
+
+  "whatsapp": "5511900000000",
+  "_whatsapp": "Somente números, com país e DDD. Ex.: 5511999999999",
+  "whatsappLink": false,
+  "_whatsappLink": "false = o número aparece só como texto e nenhum botão leva ao WhatsApp. Troque para true quando o número for real.",
+  "mensagemWhatsapp": "Olá, Lívia! Gostaria de conversar sobre o atendimento.",
+
+  "crp": "06/000000",
+  "_crp": "Ex.: 06/123456 (aparece como 'CRP 06/123456')",
+
+  "endereco": "Rua dos Ipês Dourados, 100, sala 1 — Jardim Aurora, São Paulo/SP",
+  "_endereco": "Endereço completo em uma linha. Ex.: Rua X, 123, sala 4 — Bairro, Cidade/UF",
+  "mapaUrl": "",
+  "_mapaUrl": "Link do Google Maps (opcional)",
+
+  "horarios": "Segunda a sexta, das 9h às 19h · Sábado, das 9h às 12h",
+  "_horarios": "Texto livre. Ex.: Segunda a sexta, das 9h às 18h",
+
+  "instagram": "",
+  "_instagram": "URL completa do perfil (opcional)",
+
+  "googleSiteVerification": "",
+  "_googleSiteVerification": "Código da meta tag de verificação do Search Console (opcional; veja docs/SEO-E-SEARCH-CONSOLE.md)",
+
+  "desenvolvedorUrl": "http://thiagolabs.com.br/",
+  "_desenvolvedorUrl": "Link do site de quem desenvolveu (aparece no rodapé em 'Desenvolvido por Thiago Labs')",
+
+  "ano": 2026
+}
