@@ -11,7 +11,7 @@ src/css/styles.css    identidade visual, tokens de cor no :root
 src/js/main.js        menu do celular e destaque da seção atual
 src/img, src/fonts    imagens otimizadas e Nunito
 scripts/imagens.mjs   gera AVIF/WebP, favicons e og-image a partir do material original
-scripts/build.mjs     monta dist/ (injeta config, sitemap, robots, JSON-LD)
+scripts/build.mjs     monta public/ (injeta config, sitemap, robots, JSON-LD)
 docs/                 pendências e passo a passo de SEO
 ```
 
@@ -19,8 +19,8 @@ docs/                 pendências e passo a passo de SEO
 
 ```bash
 npm install            # só para regenerar imagens (sharp)
-npm run build          # dist/ de revisão: noindex, aceita campos vazios
-npm run producao       # dist/ publicável: exige domínio e WhatsApp, libera indexação
+npm run build          # public/ de revisão: noindex, aceita campos vazios
+npm run producao       # public/ publicável: exige domínio e WhatsApp, libera indexação
 npm run preview        # build + servidor local em http://127.0.0.1:4173
 npm run imagens        # regenera src/img a partir das pastas originais
 ```

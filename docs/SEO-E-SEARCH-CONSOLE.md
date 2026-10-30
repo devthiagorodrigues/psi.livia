@@ -12,8 +12,8 @@
 ## Fluxo de publicação
 
 1. Preencher `site.config.json` (ao menos `dominio` e `whatsapp`).
-2. `npm run producao` → gera `dist/` com `index, follow`, canonical e sitemap no domínio real. O comando **falha** se faltar domínio ou WhatsApp.
-3. Enviar o conteúdo de `dist/` para a hospedagem e apontar o domínio `.com.br`.
+2. `npm run producao` → gera `public/` com `index, follow`, canonical e sitemap no domínio real. O comando **falha** se faltar domínio ou WhatsApp.
+3. Enviar o conteúdo de `public/` para a hospedagem e apontar o domínio `.com.br`.
 4. Conferir `https://SEU-DOMINIO/robots.txt` e `https://SEU-DOMINIO/sitemap.xml`.
 
 ## Search Console (precisa de domínio publicado e acesso à conta Google)

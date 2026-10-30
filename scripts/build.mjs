@@ -1,4 +1,4 @@
-// Monta a pasta dist/ a partir de src/ + site.config.json.
+// Monta a pasta public/ a partir de src/ + site.config.json.
 //   npm run build      → versão de revisão (noindex, aceita campos vazios, avisa o que falta)
 //   npm run producao   → versão publicável (falha se faltar domínio ou WhatsApp; libera indexação)
 import { readFile, writeFile, mkdir, rm, cp, readdir } from 'node:fs/promises';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const src = path.join(raiz, 'src');
 const argSaida = process.argv.find((a) => a.startsWith('--out='));
-const dist = argSaida ? path.resolve(argSaida.slice(6)) : path.join(raiz, 'dist');
+const dist = argSaida ? path.resolve(argSaida.slice(6)) : path.join(raiz, 'public');
 const producao = process.argv.includes('--producao');
 
 const argConfig = process.argv.find((a) => a.startsWith('--config='));
@@ -174,6 +174,6 @@ const total = async (dir) => {
   }
   return n;
 };
-console.log(`\n✔ ${producao ? 'Build de PRODUÇÃO' : 'Build de REVISÃO (noindex)'} em dist/  (${(await total(dist) / 1024 / 1024).toFixed(1)} MB)`);
+console.log(`\n✔ ${producao ? 'Build de PRODUÇÃO' : 'Build de REVISÃO (noindex)'} em public/  (${(await total(dist) / 1024 / 1024).toFixed(1)} MB)`);
 if (pendencias.length) console.log(`⚠ Pendências em site.config.json: ${pendencias.join(', ')}`);
 if (!txt(cfg.dominio)) console.log('⚠ Domínio vazio: canonical, sitemap e og:image usam um endereço provisório.');
