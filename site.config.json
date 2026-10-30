@@ -13,8 +13,8 @@
   "crp": "06/000000",
   "_crp": "Ex.: 06/123456 (aparece como 'CRP 06/123456')",
 
-  "endereco": "Rua dos Ipês Dourados, 100, sala 1 — Jardim Aurora, São Paulo/SP",
-  "_endereco": "Endereço completo em uma linha. Ex.: Rua X, 123, sala 4 — Bairro, Cidade/UF",
+  "endereco": "Rua dos Ipês Dourados, 100, sala 1, Jardim Aurora, São Paulo/SP",
+  "_endereco": "Endereço completo em uma linha. Ex.: Rua X, 123, sala 4, Bairro, Cidade/UF",
   "mapaUrl": "",
   "_mapaUrl": "Link do Google Maps (opcional)",
 
