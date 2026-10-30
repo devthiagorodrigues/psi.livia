@@ -313,17 +313,42 @@
   </main>
 
   <footer class="rodape">
-    <div class="caixa rodape__interno">
-      <a class="rodape__logo" href="#inicio" aria-label="Lívia Goulart — Psicologia Infantil, voltar ao início">
-        <img src="img/logo-vinho-360.webp" width="360" height="189" alt="Lívia Goulart — Psicologia Infantil" loading="lazy">
+    <div class="caixa">
+      <div class="rodape__cols">
+        <div class="rodape__col">
+          <h2>Atendimento</h2>
+          <p>{{#if endereco}}{{endereco}}{{else}}<span class="pendente">endereço a confirmar</span>{{/if}}</p>
+          <p>{{#if horarios}}{{horarios}}{{else}}<span class="pendente">horários a confirmar</span>{{/if}}</p>
+        </div>
+        <div class="rodape__col">
+          <h2>Contato</h2>
+          <p>{{#if whatsapp}}WhatsApp {{whatsapp_exibir}}{{else}}<span class="pendente">WhatsApp a confirmar</span>{{/if}}</p>
+          {{#if instagram}}<p><a href="{{instagram}}" rel="noopener" target="_blank">Instagram<span class="sr-only"> (abre em nova aba)</span></a></p>{{/if}}
+        </div>
+        <div class="rodape__col">
+          <h2>Navegue</h2>
+          <ul>
+            <li><a href="#sobre">Sobre a Lívia</a></li>
+            <li><a href="#ajuda">Como posso ajudar</a></li>
+            <li><a href="#acompanhamento">Acompanhamento</a></li>
+            <li><a href="#espaco">O espaço</a></li>
+            <li><a href="#contato">Dúvidas e contato</a></li>
+          </ul>
+        </div>
+        <div class="rodape__col">
+          <h2>Profissional</h2>
+          <p>Lívia Goulart, psicóloga</p>
+          <p>{{#if crp}}CRP {{crp}}{{else}}<span class="pendente">CRP a confirmar</span>{{/if}}</p>
+          <p><a href="privacidade.html">Política de privacidade</a></p>
+        </div>
+      </div>
+      <a class="rodape__marca" href="#inicio" aria-label="Lívia Goulart — Psicologia Infantil, voltar ao início">
+        <img src="img/logo-creme-360.webp" srcset="img/logo-creme-360.webp 360w, img/logo-creme-720.webp 720w" sizes="320px" width="720" height="378" alt="" loading="lazy">
       </a>
-      <div class="rodape__texto">
-        <p><strong>Cada criança tem seu tempo.</strong></p>
-        <p>{{#if crp}}Psicóloga · CRP {{crp}}{{else}}Psicóloga · <span class="pendente">CRP a confirmar</span>{{/if}}</p>
-        <p class="rodape__aviso">Este site tem caráter informativo e não substitui avaliação ou atendimento psicológico. Em situação de emergência, ligue 192 (SAMU).</p>
-        <p class="rodape__aviso">© {{ano}} Lívia Goulart — Psicologia Infantil. Todos os direitos reservados.</p>
-        <p class="rodape__aviso"><a href="privacidade.html">Política de privacidade</a></p>
-        <p class="rodape__aviso">Desenvolvido por {{#if desenvolvedorUrl}}<a href="{{desenvolvedorUrl}}" rel="noopener" target="_blank">Thiago Labs<span class="sr-only"> (abre em nova aba)</span></a>{{else}}Thiago Labs{{/if}}</p>
+      <p class="rodape__aviso">Este site tem caráter informativo e não substitui avaliação ou atendimento psicológico. Em situação de emergência, ligue 192 (SAMU).</p>
+      <div class="rodape__fim">
+        <p>© {{ano}} Lívia Goulart — Psicologia Infantil. Todos os direitos reservados.</p>
+        <p>Desenvolvido por {{#if desenvolvedorUrl}}<a href="{{desenvolvedorUrl}}" rel="noopener" target="_blank">Thiago Labs<span class="sr-only"> (abre em nova aba)</span></a>{{else}}Thiago Labs{{/if}}</p>
       </div>
     </div>
   </footer>

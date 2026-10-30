@@ -33,6 +33,11 @@ async function gerar(entrada, nome, larguras, { avif = true, qualidade = 72, pre
 const aparar = (b) => b.trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 8 });
 await gerar(path.join(kit, 'logos/logo-horizontal.png'), 'logo-horizontal', [360, 720], { avif: false, qualidade: 92, preparar: aparar });
 await gerar(path.join(kit, 'logos/logo-vinho.png'), 'logo-vinho', [360, 720], { avif: false, qualidade: 92, preparar: aparar });
+// Logo em creme para o rodapé escuro: mesma silhueta da logo vinho, só com a cor trocada.
+const silhueta = await sharp(path.join(kit, 'logos/logo-vinho.png')).trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 8 }).png().toBuffer();
+const { width: lw, height: lh } = await sharp(silhueta).metadata();
+const logoCreme = await sharp({ create: { width: lw, height: lh, channels: 4, background: CREME } }).composite([{ input: silhueta, blend: 'dest-in' }]).png().toBuffer();
+await gerar(logoCreme, 'logo-creme', [360, 720], { avif: false, qualidade: 92 });
 await sharp(path.join(kit, 'logos/logo-principal.png')).trim({ threshold: 8 }).resize({ width: 800 }).png().toFile(path.join(saida, 'logo-principal.png'));
 
 // Ilustração com transparência

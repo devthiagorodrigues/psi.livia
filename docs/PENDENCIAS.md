@@ -35,6 +35,7 @@ Os textos foram escritos a partir do direcionamento editorial do briefing. Nenhu
 ## 3. Imagens
 
 - Retratos e ambientes estão em `src/img`. Para trocar por fotos reais, substitua os arquivos ou rode `npm run imagens` com os novos originais e revise os textos alternativos.
+- O rodapé usa `logo-creme`, gerada por `npm run imagens` a partir da logo vinho (mesma silhueta, só a cor trocada para o creme `#FFF9ED`). Conferir se a Lívia aprova essa versão monocromática sobre fundo vinho.
 - As logos são PNG, não vetores. Foram apenas aparadas na margem transparente, sem alterar proporção nem desenho. Para impressão em grande formato é preciso vetorizar.
 
 ## 4. Publicação (depende de domínio, hospedagem e acesso à conta)
